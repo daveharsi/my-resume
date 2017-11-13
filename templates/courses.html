@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+{% extends "home.html"%}
+{% block title %}Courses{% endblock %}
+{% block head%}
+  {{ super() }}
+{% endblock%}
+{% block page_content%}
+
+  <!-- Page Content -->
+  <div class="container">
+    <h1 class="mt-5"> <i class="fa fa-book" aria-hidden="true"></i>Courses</h1>
+    <h2 class="mt-5"> <i class="fa fa-code" aria-hidden="true"></i>My programming courses:</h2>
+    <ul>
+        {% for course in courses %}
+          <li><a data-toggle="modal" href="#myModal">{{course[1]}}</a></li>
+        {% endfor%}
+    </ul>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            {% for name in courses %}
+              <h4 class="modal-title">{{name[1]}}</h4>
+            {% endfor%}
+          </div>
+          <div class="modal-body">
+            {% for desc in courses %}
+
+            {% endfor %}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+{% endblock%}
