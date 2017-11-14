@@ -5,14 +5,36 @@
 
 {% block head%}
   {{ super() }}
-{% endblock%}
+  <style>
+    body {
+      padding-top: 54px;
+    }
+     a:link {color: black;}
+     a:visited {color: black;}
+     a:hover {color: red;}
+     a:active {color: black;}
 
+    .mt-6{
+      display: inline-block;
+      padding-right: 30px;
+    }
+
+    #first-para {
+      padding-top: 15px;
+    }
+
+  </style>
+{% endblock%}
 {% block page_content%}
   <!-- Page Content -->
   <div class="container">
     <h1 class="mt-5"><i class="fa fa-address-card-o" aria-hidden="true"></i> About Me</h1>
     <p>This project is developed by Devarshi Patel</p>
-    <p class="mt-5"><i class="fa fa-chain" aria-hidden="true"></i> Connect with me</p>
+    <p class="mt-5"><i class="fa fa-chain" aria-hidden="true"></i> Connect with me:</p>
+    <div class="col col-lg-3">
+      <h3 class="mt-6"><a href="https://github.com/daveharsi"><i class="fa fa-github" aria-hidden="true"></i></a></h3>
+      <h3 class="mt-6"><a href="https://www.linkedin.com/in/devarshi-patel-97210b148/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></h3>
+    </div>
   </div>
 {% endblock%}
 
