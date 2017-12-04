@@ -6,7 +6,7 @@
 
   <!-- Page Content -->
   <div class="container">
-    <br><h1 class="mt-5"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Professors:</h1>
+    <br><h1 class="mt-5"><i class="fa fa-user-plus" aria-hidden="true"></i> Professors:</h1>
     <div class="row bottom-margin">
       <a href="/professor/add" class="btn btn-primary" role="button" aria-disabled="true"> Add Professors</a>
     </div>
@@ -26,6 +26,7 @@
               <td>{{professor.department}}</td>
               <td>
                 <a href="/professor/edit/{{professor.id}}" class="btn btn-success" role="button" aria-disabled="true">Edit</a>
+                <a href="/professor/delete/{{professor.id}}" class="btn btn-danger" role="button">Delete</a>
               </td>
           </tr>
           {% endfor%}
